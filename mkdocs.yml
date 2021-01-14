@@ -47,5 +47,5 @@ extra_css:
   - 'stylesheets/extra.css'
   - 'stylesheets/links.css'
 
-repo_name: {{ repository_name }} # for example: 'lyz-code/pydo'
-repo_url: {{ repository_url }} # for example: 'https://github.com/lyz-code/pydo'
+repo_name: julopezc-acciona/wiki
+repo_url: https://julopezc-acciona.github.io/wiki

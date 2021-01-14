@@ -4,37 +4,6 @@ site_url: https://julopezc-acciona.github.io/wiki
 nav:
   - Introduction: 'index.md'
 
-plugins:
-  - search
-  - autolinks
-  - git-revision-date-localized:
-      type: timeago
-  - minify:
-      minify_html: true
-
-markdown_extensions:
-  - admonition
-  - meta
-  - toc:
-      permalink: true
-      baselevel: 2
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-
 theme:
   name: material
   custom_dir: "theme"

@@ -6,8 +6,6 @@ nav:
 
 theme:
   name: material
-  custom_dir: "theme"
-  logo: "images/logo.png"
   palette:
     primary: 'blue grey'
     accent: 'light blue'

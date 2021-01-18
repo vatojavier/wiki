@@ -1,2 +1,2 @@
-# wiki
-wiki personal
+# Wiki
+Wiki personal

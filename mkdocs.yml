@@ -2,6 +2,10 @@ site_name: Wiki
 site_author: vatojavi
 nav:
   - Introduction: 'index.md'
+  - Informática: 
+    - Informática: informatica/informatica.md
+    - Python: 
+      - Bucles óptimos: informatica/python/bucles_optimos.md
 
 theme:
   name: material
@@ -10,4 +14,4 @@ theme:
     accent: 'light blue'
 
 repo_name: github.com/vatojavier/wiki
-repo_url: https://vatojavier.github.io/wiki/
+repo_url: https://github.com/vatojavier/wiki

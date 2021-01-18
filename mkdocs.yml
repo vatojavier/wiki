@@ -1,6 +1,5 @@
-site_name: Wiki1
-site_author: Wiki2
-site_url: https://julopezc-acciona.github.io/wiki
+site_name: Wiki
+site_author: vatojavi
 nav:
   - Introduction: 'index.md'
 

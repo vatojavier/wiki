@@ -23,6 +23,6 @@ a
 
 ### Lista las DB
 
-`
+```
 psql -U postgres -l
-`
+```

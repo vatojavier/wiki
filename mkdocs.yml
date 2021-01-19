@@ -6,6 +6,8 @@ nav:
     - Informática: informatica/informatica.md
     - Python: 
       - Bucles óptimos: informatica/python/bucles_optimos.md
+    - Bases de Datos:
+      - PostgreSQL:  informatica/BBDD/Postgres.md
 
 theme:
   name: material

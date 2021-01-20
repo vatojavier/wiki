@@ -32,3 +32,7 @@ psql -U postgres -l
 Listar DBs: ```\l```
 
 Listar usuarios: ```\du```
+
+Conectar a DB: ```\c database```
+
+Listar tablas de esa DB: ```\dt```

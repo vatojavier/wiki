@@ -30,3 +30,4 @@ psql -U postgres -l
 ### Comandos dentro de psql
 
 Listar DBs: ```\l```
+Listar usuarios: ```\du```

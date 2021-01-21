@@ -15,7 +15,7 @@ theme:
   palette:
     scheme: slate
     primary: pink
-    accent: 'light blue'
+    accent: red
 
 repo_name: vatojavier/wiki
 repo_url: https://github.com/vatojavier/wiki

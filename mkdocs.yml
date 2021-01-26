@@ -12,7 +12,7 @@ nav:
     
     - Jamada: 
       - Comidas:
-        - Fajitas: fajitas.md
+        - Fajitas: a_zampar/comidas/fajitas.md
 
 theme:
   name: material

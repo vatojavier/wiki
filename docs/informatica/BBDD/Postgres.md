@@ -6,7 +6,7 @@ Después de instalarlo como dice la página puede dar el error:
 psql: error: FATAL:  Peer authentication failed for user "postgres"
 `
 
-Entonces cambiar la linea del archivo `/etc/postgresql/9.1/main/pg_hba.conf`
+Entonces cambiar la linea del archivo `/etc/postgresql/13/main/pg_hba.conf`
 
 de
 
@@ -23,6 +23,16 @@ a
 
 ### Lista las DB
 
-`
+```
 psql -U postgres -l
-`
+```
+
+### Comandos dentro de psql
+
+Listar DBs: ```\l```
+
+Listar usuarios: ```\du```
+
+Conectar a DB: ```\c database```
+
+Listar tablas de esa DB: ```\dt```

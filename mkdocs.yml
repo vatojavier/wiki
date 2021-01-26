@@ -9,6 +9,10 @@ nav:
       - Regresión: informatica/python/regresion.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
+    
+    - Jamada: 
+      - Comidas:
+        - Fajitas: fajitas.md
 
 theme:
   name: material

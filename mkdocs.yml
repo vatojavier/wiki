@@ -15,9 +15,9 @@ nav:
     - Control de versiones:
       - Git: informatica/control_versiones/git.md
   
-    - Jamada: 
-      - Comidas:
-        - Fajitas: a_zampar/comidas/fajitas.md
+   - Jamada: 
+     - Comidas:
+       - Fajitas: a_zampar/comidas/fajitas.md
 
 theme:
   name: material

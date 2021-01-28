@@ -12,6 +12,8 @@ nav:
       - PostgreSQL:  informatica/BBDD/Postgres.md
     - Editores:
       - VSCode:  informatica/editores/vscode.md
+     - Control de versiones:
+      - Git: informatica/control_versiones/git.md
     
     - Jamada: 
       - Comidas:

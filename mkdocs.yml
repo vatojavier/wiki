@@ -10,6 +10,8 @@ nav:
       - Pandas: informatica/python/pandas.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
+    - Editores:
+      - VSCode:  informatica/editores/vscode.md
     
     - Jamada: 
       - Comidas:

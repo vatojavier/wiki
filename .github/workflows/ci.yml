@@ -13,7 +13,4 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: pip install markdown
-      - run: pip install Pygments
-      - run: pip install pymdown-extensions 
       - run: mkdocs gh-deploy --force

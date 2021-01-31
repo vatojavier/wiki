@@ -26,5 +26,11 @@ theme:
     primary: pink
     accent: red
 
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
 repo_name: vatojavier/wiki
 repo_url: https://github.com/vatojavier/wiki

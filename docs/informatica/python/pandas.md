@@ -1,5 +1,19 @@
 # Pandas
 
+## Aplicar función custom para DF
+
+Añade un nuevo campo al dataframe dependiendo de una condición calculada por función.
+Con list comprehension no se pueden utilizar funciones custom.
+
+Se puede acceder al campo de la fila ya sea con row["campo"] o row.campo 
+```python
+df["mov"] = df.apply(lambda row: False if viaje_terminado_cerca(row["pos_init"], row.pos_fin) else True, axis=1)
+```
+Con esto podrías filtrar las nuevas filas que no hayan terminado cerca
+```python
+df = df[df["mov"] == Tue]
+```
+
 ## Pillar un valor filtrando DF con condición múltiple:
 
 ```python

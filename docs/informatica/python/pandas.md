@@ -1,6 +1,6 @@
 # Pandas
 
-## Aplicar función custom para DF
+## Aplicar función custom para DF usando Lambda
 
 Añade un nuevo campo al dataframe dependiendo de una condición calculada por función.
 Con list comprehension no se pueden utilizar funciones custom.

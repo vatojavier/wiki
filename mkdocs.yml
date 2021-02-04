@@ -8,6 +8,7 @@ nav:
       - Bucles óptimos: informatica/python/bucles_optimos.md
       - Regresión: informatica/python/regresion.md
       - Pandas: informatica/python/pandas.md
+      - Conexión a DBs: informatica/python/cDB.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
     - Editores:

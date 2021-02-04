@@ -1,6 +1,8 @@
 # Conexiones a bases de datos usando python
 
-## SQLAlchemy
+## MySQL
+
+### SQLAlchemy
 
 `pip install sqlachemy`
 

@@ -4,7 +4,7 @@ nav:
   - Introduction: 'index.md'
   - Informática: 
     - Informática: informatica/informatica.md
-    - linux: informatica/linux/linux.md
+    - Linux: informatica/linux/linux.md
     - Python: 
       - Bucles óptimos: informatica/python/bucles_optimos.md
       - Regresión: informatica/python/regresion.md

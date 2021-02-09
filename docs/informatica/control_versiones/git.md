@@ -10,3 +10,10 @@ Cambiar a:
 
 Combinar crear y cambiar:
 `git checkout -b nombre_rama`
+
+### Merge
+Mergea la rama que digas -> en la que estás `feature/feature_mazo_wapo -> develop`
+
+`git checkout develop`
+
+`git merge feature/feature_mazo_wapo`

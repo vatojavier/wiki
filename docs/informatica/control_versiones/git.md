@@ -36,3 +36,10 @@ En la rama **feature/cosa_wapa**
                  /
     D---E---F---G develop
  
+ 
+ ## Autorizar SSH
+ Puede dar el error `git@github.com: Permission denied (publickey)...`
+ 
+ Seguir los pasos de generate, add y SAML (para organización) [GitHub](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+ 

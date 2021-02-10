@@ -6,6 +6,7 @@ Crear kernel para poder cambiar de entorno on the fly
 En el entorno virtual que quieres añadir:
 
 ```
+pip install ipython
 pip install tornado ipykernel
 ipython kernel install --user --name=kernelname
 ```

@@ -21,6 +21,7 @@ nav:
   - Jamada: 
     - Comidas:
       - Fajitas: a_zampar/comidas/fajitas.md
+      - Pasta Feta: a_zampar/comidas/pasta_feta.md
 
 theme:
   name: material

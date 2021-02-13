@@ -13,9 +13,13 @@
 ```
 
 En bandeja de horno
+
 1. Poner un poco aceite en la bandeja.
+
 1. Meter Tomates, Ajos y Queso en el centro.
+
 1. Espolvorear Sal, Pimienta y Orégano.
+
 1. Chorro de aceite por encima de todo.
 
 1. Meter al horno 200º 30 min. hasta que tomates blandos

@@ -28,9 +28,6 @@ df = df[df["mov"] == True]
 ```
 ---
 
-
-
----
 ## Aplicar "filtro" a determiandos valores de DF
 
 Por ejemplo si quieres reemplazar todos los 0 de una columna por un número

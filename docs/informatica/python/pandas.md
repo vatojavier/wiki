@@ -1,5 +1,17 @@
 # Pandas
 
+## Pillar un valor filtrando DF con condición múltiple:
+```python
+valor = df[(df["columna_x"] == x) & (df["columna_x"] == y)]["columna"].iloc[0]
+```
+---
+
+## Devolver fila completa con valor máximo
+```python
+df.loc[df['Value'].idxmax()]
+```
+---
+
 ## Aplicar función custom para DF usando Lambda
 
 Añade un nuevo campo al dataframe dependiendo de una condición calculada por función.
@@ -16,10 +28,7 @@ df = df[df["mov"] == True]
 ```
 ---
 
-## Pillar un valor filtrando DF con condición múltiple:
-```python
-valor = df[(df["columna_x"] == x) & (df["columna_x"] == y)]["columna"].iloc[0]
-```
+
 
 ---
 ## Aplicar "filtro" a determiandos valores de DF
@@ -30,12 +39,4 @@ Por ejemplo si quieres reemplazar todos los 0 de una columna por un número
 mask = df["columna"] == 0
 df.loc[mask, "columna"] = new_value
 ```
-
----
-
-## Devolver fila completa con valor máximo
-```python
-df.loc[df['Value'].idxmax()]
-```
-
 ---

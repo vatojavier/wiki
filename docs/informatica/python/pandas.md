@@ -4,12 +4,14 @@
 ```python
 valor = df[(df["columna_x"] == x) & (df["columna_x"] == y)]["columna"].iloc[0]
 ```
+
 ---
 
 ## Devolver fila completa con valor máximo
 ```python
 df.loc[df['Value'].idxmax()]
 ```
+
 ---
 
 ## Aplicar función custom para DF usando Lambda
@@ -26,6 +28,7 @@ Con esto podrías filtrar las nuevas filas que no hayan terminado cerca (movimie
 ```python
 df = df[df["mov"] == True]
 ```
+
 ---
 
 ## Aplicar "filtro" a determiandos valores de DF
@@ -36,4 +39,5 @@ Por ejemplo si quieres reemplazar todos los 0 de una columna por un número
 mask = df["columna"] == 0
 df.loc[mask, "columna"] = new_value
 ```
+
 ---

@@ -36,14 +36,15 @@ En la rama **feature/cosa_wapa**
                  /
     D---E---F---G develop
  
- 
+  
  
  ## Grep
+ 
  -n muestra la linea con enlace
  
  `git grep -n "cosa_interesante"`
  
- 
+  
  ## Autorizar SSH
  
  Puede dar el error `git@github.com: Permission denied (publickey)...`

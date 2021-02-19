@@ -26,15 +26,24 @@ Estás en rama **feature/cosa_wapa** y has hecho algún cambio directo en la ram
 En la rama **feature/cosa_wapa**
 
  
- jeje
+          A---B---C feature/cosa_wapa
+         /
+    D---E---F---G develop
+    
+ `git rebase develop`
  
- ## Grep
+                  A'--B'--C' feature/cosa_wapa
+                 /
+    D---E---F---G develop
+    
+    
+## Grep
  -n muestra la linea con enlace
  
  `git grep -n "cosa_interesante"`
  
  
- ## Autorizar SSH
+## Autorizar SSH
  
  Puede dar el error `git@github.com: Permission denied (publickey)...`
  

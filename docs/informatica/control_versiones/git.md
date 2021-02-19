@@ -25,16 +25,6 @@ Estás en rama **feature/cosa_wapa** y has hecho algún cambio directo en la ram
 
 En la rama **feature/cosa_wapa**
 
-
-          A---B---C feature/cosa_wapa
-         /
-    D---E---F---G develop
-    
- `git rebase develop`
- 
-                  A'--B'--C' feature/cosa_wapa
-                 /
-    D---E---F---G develop
  
  jeje
  

@@ -6,10 +6,12 @@ nav:
     - Informática: informatica/informatica.md
     - Linux: informatica/linux/linux.md
     - Python: 
-      - Bucles óptimos: informatica/python/bucles_optimos.md
+      - General: informatica/python/bucles_optimos.md
       - Regresión: informatica/python/regresion.md
       - Pandas: informatica/python/pandas.md
       - Conexión a DBs: informatica/python/cDB.md
+    - Kotlin:
+      - General: informatica/kotlin/kotlin.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
     - Editores:

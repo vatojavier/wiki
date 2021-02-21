@@ -4,7 +4,6 @@ nav:
   - Introduction: 'index.md'
   - Informática: 
     - Informática: informatica/informatica.md
-    - Linux: informatica/linux/linux.md
     - Python: 
       - General: informatica/python/general.md
       - Regresión: informatica/python/regresion.md
@@ -12,6 +11,7 @@ nav:
       - Conexión a DBs: informatica/python/cDB.md
     - Kotlin:
       - General: informatica/kotlin/kotlin.md
+    - Linux: informatica/linux/linux.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
     - Editores:

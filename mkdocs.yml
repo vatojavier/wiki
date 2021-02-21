@@ -6,7 +6,7 @@ nav:
     - Informática: informatica/informatica.md
     - Linux: informatica/linux/linux.md
     - Python: 
-      - General: informatica/python/bucles_optimos.md
+      - General: informatica/python/general.md
       - Regresión: informatica/python/regresion.md
       - Pandas: informatica/python/pandas.md
       - Conexión a DBs: informatica/python/cDB.md

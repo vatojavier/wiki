@@ -4,15 +4,16 @@ nav:
   - Introduction: 'index.md'
   - Informática: 
     - Informática: informatica/informatica.md
-    - Python: 
-      - General: informatica/python/general.md
-      - Regresión: informatica/python/regresion.md
-      - Pandas: informatica/python/pandas.md
-      - Conexión a DBs: informatica/python/cDB.md
-    - Kotlin:
-      - General: informatica/kotlin/kotlin.md
-    - JavaScript:
-      - General: informatica/js/js.md
+    - Programación:
+      - Python: 
+        - General: informatica/python/general.md
+        - Regresión: informatica/python/regresion.md
+        - Pandas: informatica/python/pandas.md
+        - Conexión a DBs: informatica/python/cDB.md
+      - Kotlin:
+        - General: informatica/kotlin/kotlin.md
+      - JavaScript:
+        - General: informatica/js/js.md
     - Linux: informatica/linux/linux.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md

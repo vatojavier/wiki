@@ -2,8 +2,7 @@ site_name: Wiki movidas
 site_author: vatojavi
 nav:
   - Introduction: 'index.md'
-  - Informática: 
-    - Informática: informatica/informatica.md
+  - Informática:
     - Programación:
       - Python: 
         - General: informatica/python/general.md

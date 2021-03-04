@@ -11,6 +11,8 @@ nav:
       - Conexión a DBs: informatica/python/cDB.md
     - Kotlin:
       - General: informatica/kotlin/kotlin.md
+    - JavaScript:
+      - General: informatica/kotlin/js.md
     - Linux: informatica/linux/linux.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md

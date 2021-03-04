@@ -12,7 +12,7 @@ nav:
     - Kotlin:
       - General: informatica/kotlin/kotlin.md
     - JavaScript:
-      - General: informatica/kotlin/js.md
+      - General: informatica/js/js.md
     - Linux: informatica/linux/linux.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md

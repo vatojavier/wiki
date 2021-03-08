@@ -15,3 +15,13 @@ lista = [f(x) if condition else g(x) for cosa in cosas]
 lista = [f(x) for cosa in cosas if condition]
 
 ```
+
+## Breakpoint con saltos de linea
+
+`pip install ipython`
+
+En el breakpoint poner:
+
+```
+(pdb) from IPython import embed; embed()
+```

@@ -1,5 +1,11 @@
 # VSCode
 
+
+## Comando abrir acciones
+
+Ctrl + shift + p
+
+
 ## Workspace
 Para tener abiertos distintos repos a la vez y no reiniciar el VSCode
 
@@ -22,3 +28,5 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 
 
 ```
+
+

@@ -63,3 +63,16 @@ class MainFragment: Fragment() {
         // Y ya se puede usar jaujas
     }
 ```
+
+## Comparar fragments en un FrameLayout
+
+Teniendo `MainFragment` como una clase que hereda de `Fragment()`
+
+```kotlin
+var fragment = supportFragmentManager.findFragmentById(R.id.container) // Id del frame que aloja al fragmen
+
+if(fragment is MainFragment){
+  // Hacer movidas
+}
+```
+Si no va algo, meter los diseños en un `<layout>` y espabilando.

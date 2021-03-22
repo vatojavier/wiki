@@ -14,7 +14,6 @@ android{
 ```
 
 2. Envolver ficher de diseño de actividad/fragmento en un `<layout>`:
-
 ```xml
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,8 +28,7 @@ android{
 
 3. Declarar e inicializar el objeto binding:
 
-Si es una actividad se inicializa en onCreate():
-
+- Si es una actividad se inicializa en onCreate():
 ```kotlin
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -43,8 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 ```
 
-Si es un fragmento se hace en OnCreateView():
-
+- Si es un fragmento se hace en OnCreateView():
 ```kotlin
 class MainFragment: Fragment() {
     lateinit var binding: FragmentMainBinding
@@ -65,9 +62,7 @@ class MainFragment: Fragment() {
 ```
 
 ## Comparar fragments en un FrameLayout
-
 Teniendo `MainFragment` como una clase que hereda de `Fragment()`
-
 ```kotlin
 var fragment = supportFragmentManager.findFragmentById(R.id.container) // Id del frame que aloja al fragmen
 

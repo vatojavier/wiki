@@ -28,7 +28,7 @@ android{
 
 3. Declarar e inicializar el objeto binding:
 
-- Si es una actividad se inicializa en onCreate():
+  - Si es una actividad se inicializa en onCreate():
 ```kotlin
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 ```
 
-- Si es un fragmento se hace en OnCreateView():
+  - Si es un fragmento se hace en OnCreateView():
 ```kotlin
 class MainFragment: Fragment() {
     lateinit var binding: FragmentMainBinding

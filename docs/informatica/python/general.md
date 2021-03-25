@@ -40,3 +40,28 @@ date_time = datetime.combine(date, datetime.min.time())  # last_date a 00:00:00,
 target_time_zone = pytz.timezone("Europe/Madrid")
 date_time.replace(tzinfo=pytz.utc).astimezone(target_time_zone).strftime('%d-%m-%Y %H') # con el dia y la hora
 ```
+
+### Tambien: 
+
+```python
+date_interest = date(2021, 3, 28)
+
+# Date previous (7 days)
+date_interest_previous = date_interest - timedelta(days=7)
+
+local_tz = pytz.timezone("Europe/Madrid")
+
+# From y to de la actual
+date_interest_time_init = datetime.combine(date_interest, datetime.min.time())  # last_date a 00:00:00
+date_interest_time_to = (
+    local_tz.localize(date_interest_time_init.replace(hour=hour)).astimezone(pytz.utc).replace(tzinfo=None)
+)
+
+# From y to de la previous
+date_interest_time_init_previous = datetime.combine(date_interest_previous, datetime.min.time())  # prev a 00:00:00
+date_interest_time_to_previous = (
+    local_tz.localize(date_interest_time_init_previous.replace(hour=hour)).astimezone(pytz.utc).replace(tzinfo=None)
+)
+
+```
+

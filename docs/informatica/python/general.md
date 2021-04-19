@@ -26,6 +26,24 @@ En el breakpoint poner:
 (pdb) from IPython import embed; embed()
 ```
 
+## Conversiones de fechas
+### Parsear str a datetime
+
+```python
+import datetime
+
+datetime_str = "2021-01-01 00:00:00"
+datetime_obj = datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S")
+
+```
+
+### Datetime obj a string
+
+```python
+obj_datetime = datetime(2021, 1, 1, 0, 0)
+str_datetime = obj_datetime.strftime("%Y-%m-%d %H:%M:%S")
+```
+
 ## Timezones y esas cosas
 
 Convertir a timezone, le dices que timezone es y lo conviertes:

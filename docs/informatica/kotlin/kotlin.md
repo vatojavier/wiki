@@ -71,3 +71,76 @@ if(fragment is MainFragment){
 }
 ```
 Si no va algo, meter los diseños en un `<layout>` y espabilando.
+
+
+## RoomDatabse con ViewModel y LiveData
+Cuando se hace una query, se hace de forma async por lo que es necesario que esta devuelva un LiveData para que cuando se reciba el resultado se pueda realizar alguna acción (actualizar el UI o asignar otros valores etc).
+
+Ejemplo actualizar valor con query:
+
+viewModel:
+```Kotlin
+class StatisticsViewModel(application: Application): AndroidViewModel(application) {
+    private val context = getApplication<Application>().applicationContext
+    
+    // Las queries devuelven un LiveData<Int>
+    val nEasy = CardDatabase.getInstance(context).cardDao.getNEasyCards()
+    val nDoubt = CardDatabase.getInstance(context).cardDao.getNDoubtCards()
+    val nHard = CardDatabase.getInstance(context).cardDao.getNHardCards()
+}
+```
+
+fragmet:
+```Kotlin
+class StatisticsFragment: Fragment() {
+
+    private val statisticsViewModel: StatisticsViewModel by lazy {
+        ViewModelProvider(this).get(StatisticsViewModel::class.java)
+    }
+    
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_statistics,
+            container,
+            false
+        )
+        
+        var easy = 0
+        var doubt = 0
+        var hard = 0
+
+        statisticsViewModel.apply {
+            nEasy.observe(
+                    viewLifecycleOwner,
+                    Observer {
+                        easy = it // Es aquí cuando se completa la query y se actualiza el valor
+                    }
+            )
+            nDoubt.observe(
+                    viewLifecycleOwner,
+                    Observer {
+                        doubt = it // Es aquí cuando se completa la query y se actualiza el valor
+                    }
+            )
+            nHard.observe(
+                    viewLifecycleOwner,
+                    Observer {
+                        hard = it // Es aquí cuando se completa la query y se actualiza el valor
+                    }
+            )
+        }
+        
+        // Aquí, easy, doubt y hard pueden ser 0 u el valor de la query dependiendo de si ha llegao a completarse la query
+        
+        return binding.root
+
+    }
+    
+```
+

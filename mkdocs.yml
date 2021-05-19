@@ -8,6 +8,7 @@ nav:
         - General: informatica/python/general.md
         - Regresión: informatica/python/regresion.md
         - Pandas: informatica/python/pandas.md
+        - Plots: informatica/python/plots.md
         - Conexión a DBs: informatica/python/cDB.md
       - Kotlin:
         - General: informatica/kotlin/kotlin.md

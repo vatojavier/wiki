@@ -7,6 +7,17 @@ valor = df[(df["columna_x"] == x) & (df["columna_x"] == y)]["columna"].iloc[0]
 
 ---
 
+## Si vas a crear un nuevo DF, hacerlo con .copy() ⚠️⚠️⚠️
+Para evitar el error de "A value is trying to be set on a copy of a slice from a DataFrame."
+
+```python
+# df_b es un nuevo DF, sin el .copy() se guarda una vista y sale un warning si quieres meterle movidas
+df_b = df_mysql[df_mysql["fecha"] > datetime(2020,6,9,0,0)].copy()
+df_b["deficit"] = df_b["motos_disponibles"] - df_b["iniciadosMySQL"]
+```
+
+--- 
+
 ## Devolver fila completa con valor máximo
 ```python
 df.loc[df['Value'].idxmax()]

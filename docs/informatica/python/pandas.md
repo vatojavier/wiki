@@ -22,6 +22,11 @@ df_b["deficit"] = df_b["motos_disponibles"] - df_b["iniciadosMySQL"]
 ```python
 df.loc[df['Value'].idxmax()]
 ```
+## Hacer un count groupby y devolviendolo como DF decente
+
+```python
+df.groupby(['col1', 'col2']).size().reset_index(name='counts')
+```
 
 ---
 

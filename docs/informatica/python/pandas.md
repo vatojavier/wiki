@@ -45,6 +45,13 @@ Con esto podrías filtrar las nuevas filas que no hayan terminado cerca (movimie
 df = df[df["mov"] == True]
 ```
 
+### Aplicar función a un índice 
+Como el df.apply pero para aplicarselo al índice (si por ejemplo tienes una fecha como índice).
+
+```python
+df_serie["week_day"] = df_serie.index.map(lambda fecha: fecha.weekday())
+```
+
 ---
 
 ## Aplicar "filtro" a determiandos valores de DF

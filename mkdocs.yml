@@ -17,6 +17,7 @@ nav:
     - Linux: informatica/linux/linux.md
     - Bases de Datos:
       - PostgreSQL:  informatica/BBDD/Postgres.md
+      - MySQL:  informatica/BBDD/MySQL.md
     - Editores:
       - VSCode:  informatica/editores/vscode.md
       - Jupyter: informatica/editores/jupyter.md

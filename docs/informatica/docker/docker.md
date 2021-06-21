@@ -21,3 +21,35 @@ RUN pip install -r requirements.txt
 WORKDIR /app
 ENTRYPOINT ["python", "send_mail.py"]
 ```
+## Desplegar
+`deployMail.sh`
+```bash
+cd /home/elvato
+
+# O si quieres desde un repo de git
+#cd /GIT/aad_datascience__reporte-diario
+#git fetch --all
+#git reset --hard origin/develop
+#git pull origin develop
+
+docker build -t reporte-mail:1.0 .
+```
+
+## Ejecutar
+`executeMail.sh`
+
+```bash
+#!/bin/bash
+
+docker rm -f reporte-mail
+
+docker run \
+  --name reporte-mail \
+  -e VAR1="VAR1" \
+  -e "VAR2=VAR2" \
+  -e "LOGS_PATH=/app/logs" \
+  -v /var/log/reporte-mail/:/app/logs \
+  reporte-mail:1.0 > /home/elvato/log.txt
+```
+
+

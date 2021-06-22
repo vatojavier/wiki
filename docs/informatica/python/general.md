@@ -82,4 +82,29 @@ date_interest_time_to_previous = (
 )
 
 ```
+# Entornos virtuales
+Todo esto en el entorno base!
+
+Instalar virtualenv
+
+`pip install virtualenv`
+
+Instalar virtualenvwrapper
+
+`pip install virtualenvwrapper`
+
+Añadir al `.bashrc`
+
+```bash
+export WORKON_HOME=$HOME/.virtualenvs
+
+# find / -name virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_SCRIPT=/home/javi/.local/bin/virtualenvwrapper.sh 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /home/javi/.local/bin/virtualenvwrapper.sh
+```
+
+
+
+
 

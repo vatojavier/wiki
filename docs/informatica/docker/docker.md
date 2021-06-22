@@ -6,6 +6,7 @@ Tener un Dockerfile y un `requirements.txt`.
 
 `ENTRYPOINT` será el comando a ejecutar cuando se eejecute el Docker.
 
+`Dockerfile`
 ```Dockerfile
 FROM python:3.8-slim-buster
 RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*

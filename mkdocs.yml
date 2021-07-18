@@ -28,6 +28,8 @@ nav:
   - Jamada: 
     - Comidas:
       - Fajitas: a_zampar/comidas/fajitas.md
+      - Arroz con pollo: a_zampar/comidas/arroz_pollo.md
+      - Pollo agridulce: a_zampar/comidas/pollo_agridulce.md
       - Pasta Feta: a_zampar/comidas/pasta_feta.md
       - Pasta carbonara: a_zampar/comidas/pasta_carbonara.md
       - Ensalada Cesar: a_zampar/comidas/ensalada_cesar.md

@@ -30,7 +30,7 @@ En el breakpoint poner:
 ### Parsear str a datetime
 
 ```python
-import datetime
+from datetime import datetime
 
 datetime_str = "2021-01-01 00:00:00"
 datetime_obj = datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S")

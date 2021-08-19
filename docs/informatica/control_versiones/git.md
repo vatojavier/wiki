@@ -38,7 +38,7 @@ En la rama **feature/cosa_wapa**
     
     
 ## Grep
- -n muestra la linea con enlace
+ -ni muestra la linea con enlace
  
  `git grep -n "cosa_interesante"`
  

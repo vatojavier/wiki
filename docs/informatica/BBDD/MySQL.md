@@ -25,3 +25,20 @@ WHERE
 end
 ) >= '{start_date}'
 ```
+
+## Show processes and kill them
+
+```MYSQL
+SHOW PROCESSLIST;
+
+KILL 38239;
+KILL 38240;
+
+-- To make it more automatically
+SELECT concat('KILL ',id,';') FROM information_schema.processlist;
+
+-- And execute the output one by one
+
+```
+
+

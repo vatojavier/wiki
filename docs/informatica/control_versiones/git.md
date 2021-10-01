@@ -1,5 +1,17 @@
 # Git
 
+## Start a git repo from existing files
+
+1. Create GitHub repo **without README**
+2. Go to the directory with the stuff
+```
+git init -b main
+git add .
+git commit -m "Project started"
+git remote add origin  <REMOTE_URL> 
+git push origin main
+```
+
 ## Ramas
 
 Crear:

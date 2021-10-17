@@ -1,5 +1,7 @@
 # Arroz con Pollo, brocoli y setas
 
+[2nd receta de este vídeo](https://www.youtube.com/watch?v=wkg_AyHE82w&ab_channel=Tastemade)
+
 ### Ingredientes 3 personas
 ```
 - 3 o 4 Pechugas de pollo (en dados)

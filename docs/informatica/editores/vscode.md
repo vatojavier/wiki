@@ -25,8 +25,12 @@ Crear archivo `nombre_cualquiera.code-workspace` con
    ]
 }
 
-
-
 ```
+## Cursor movement
+- Go back to previous loc: `Ctrl Alt -`
+- Go forward loc: `Ctrl Shift -`
 
+### VIM VSCode
+- Go beggining of file: `gg`
+- Go end of file: `G`
 

@@ -65,6 +65,7 @@ fig1.add_vline(x="2021-05-01", line_width=0.5)#, x1=2)
 
 fig1.show()
 ```
+![Alt text](lines.png "example")
 
 
 ### Histogram when Y axis is already computed

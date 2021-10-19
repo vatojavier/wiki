@@ -16,6 +16,57 @@ fig.show()
 
 ```
 
+## Figure with multiple lines from different dfs and vetical line with annotation
+
+```python
+fig1 = px.line(title="Ratings por tema en números absolutos")
+
+
+fig1.add_trace(
+          go.Scatter(
+            x=quejas['fecha'],
+            y=quejas["counts_"],
+            name="name",            
+            #line = dict(color=colors[i]),
+            mode="lines"
+          )
+)
+
+
+fig1.add_trace(
+    go.Scatter(
+        x=df_count_posneg['date_trunc'],
+        y=df_count_posneg["count_negativos"],
+        name="negativos (<= 3 estrellas)",            
+        line = dict(color="red", width=1,dash='dash'),
+        mode="lines"
+        #dash="dash"
+    )
+)
+
+fig1.add_trace(
+    go.Scatter(
+        x=df_count_posneg['date_trunc'],
+        y=df_count_posneg["count_positivos"],
+        name="positivos (> 3 estrellas)",            
+        line = dict(color="green", width=1,dash='dash'),
+        mode="lines"
+        #dash="dash"
+    )
+)
+
+fig1.add_annotation(x="2021-05-01", y=20000,
+    text="Ratings pasan de 3 a 5 estrellas",
+    showarrow=True,
+    arrowhead=1
+)
+    
+fig1.add_vline(x="2021-05-01", line_width=0.5)#, x1=2)
+
+fig1.show()
+```
+
+
 ### Histogram when Y axis is already computed
 Use ```px.bar()```
 

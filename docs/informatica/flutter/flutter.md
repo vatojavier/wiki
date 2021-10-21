@@ -11,8 +11,6 @@ Just remember to call the foking `setState()` method
 class MyFutureStatefulWidget extends StatefulWidget {
   const MyFutureStatefulWidget({ Key? key }) : super(key: key);
 
-  void method() => createState().asignar();
-
   @override
   _MyFutureStatefulWidgetState createState() => _MyFutureStatefulWidgetState();
 }

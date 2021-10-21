@@ -14,6 +14,8 @@ nav:
         - General: informatica/kotlin/kotlin.md
       - JavaScript:
         - General: informatica/js/js.md
+      - Flutter: informatica/flutter/flutter.md
+      
     - Linux: informatica/linux/linux.md
     - Bash: informatica/bash/bash.md
     - Docker: informatica/docker/docker.md

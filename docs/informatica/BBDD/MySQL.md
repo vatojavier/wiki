@@ -41,4 +41,14 @@ SELECT concat('KILL ',id,';') FROM information_schema.processlist;
 
 ```
 
+## Match bits
+Match bit position, useful when there is info by bit level (i.e user inactive reasons: bit 0 = reason x, bit 1 = reason y ...)
+```mysql
+SELECT
+  *
+FROM
+  User u
+WHERE CONVERT(inactive_reason USING BINARY) & 1 << 17 > 0 -- check if bit at 17th position is 1
+```
+
 

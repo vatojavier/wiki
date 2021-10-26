@@ -1,4 +1,4 @@
-# Bucles óptimos
+# Python
 
 ## List comprehension
 
@@ -103,6 +103,13 @@ export VIRTUALENVWRAPPER_SCRIPT=/home/javi/.local/bin/virtualenvwrapper.sh
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /home/javi/.local/bin/virtualenvwrapper.sh
 ```
+
+### Binary ops
+Number 4 in binary with all trailing 0s
+```python
+format(4, "06b")
+```
+`'000100'`
 
 
 

@@ -7,6 +7,12 @@
 
 `pip install mysqlclient`
 
+Puede que necesites antes:
+```
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install python3-dev default-libmysqlclient-dev build-essential
+```
+
 ```python
 from sqlalchemy import create_engine
 

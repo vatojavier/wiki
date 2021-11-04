@@ -8,4 +8,6 @@ sed -i 's/search_string/replace_string/' filenames
 
 **‘-i’** option is used to modify the content of the original file with the replacement string if the search string exists in the file.
 
+**Make a backup copy with** `-i.bak` and will create a copy with .bak extension
+
 **‘s’** indicates the substitute command.

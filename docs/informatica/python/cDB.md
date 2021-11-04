@@ -37,4 +37,16 @@ String de conexión:
 
 `export SQLALCHEMY_DATABASE_URI=postgresql://user:pass@ip:5432/databasename`
 
+### Execute statement
+```python
+command = """
+UPDATE motit.`User` u
+set u.city_id = 1
+where u.id in {users}
+"""
 
+users = tuple(df_usuarios_zara['id'].to_list())
+
+with mysql_engine.connect() as con:
+    con.execute(command.format(users=users))
+```

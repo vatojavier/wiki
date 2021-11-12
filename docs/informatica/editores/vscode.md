@@ -33,4 +33,7 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 ### VIM VSCode
 - Go beggining of file: `gg`
 - Go end of file: `G`
+- Replace stuff, use \ to scape special characters
+
+`:%s/foo/bar/g`
 

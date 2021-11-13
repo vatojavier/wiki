@@ -1,5 +1,44 @@
 # Vainas de flutter
 
+## Widgets with paramaters
+With positional arguments
+`CustomInputField("LMAO", Icons.lock, we, true)`
+```dart
+class CustomInputField extends StatelessWidget {
+  const CustomInputField(
+    this.hintText,
+    this.icon,
+    this.mediaWidth,
+    this.isPassword, {
+    Key? key,
+  }) : super(key: key);
+  
+  final String hintText;
+  final IconData icon;
+  final num mediaWidth;
+  final bool isPassword;
+  // ...
+}
+```
+Or with "named" arguments:
+
+`CustomInputFieldNamed(hintText: "LMAO", icon: Icons.lock, mediaWidth: we)`
+```dart
+class CustomInputFieldNamed extends StatelessWidget {
+  const CustomInputFieldNamed({
+    Key? key,
+    required this.hintText,
+    required this.icon,
+    required this.mediaWidth,
+  }) : super(key: key);
+
+  final String hintText;
+  final IconData icon;
+  final num mediaWidth;
+  // ...
+ }
+```
+
 
 ## Async call using FutureBuilder when pressing a button
 Insert this widget into a widget or whatever.
@@ -97,3 +136,4 @@ class _MyFutureStatefulWidgetState extends State<MyFutureStatefulWidget> {
 }
 
 ```
+

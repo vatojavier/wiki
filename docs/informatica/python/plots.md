@@ -19,6 +19,9 @@ fig.show()
 ## Figure with multiple lines from different dfs and vetical line with annotation
 
 ```python
+import plotly.graph_objects as go
+import plotly.express as px
+
 fig1 = px.line(title="Ratings por tema en números absolutos")
 
 

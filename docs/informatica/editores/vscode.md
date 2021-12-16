@@ -37,3 +37,10 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 
 `:%s/foo/bar/g`
 
+- Select word under cursor: `viw`
+
+#### Cursor:
+- Go to function definition: `ctr+]`
+- Go back: `ctrl+o`
+- Go forth: `ctrl+i`
+

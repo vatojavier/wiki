@@ -30,7 +30,7 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 - Go back to previous loc: `Ctrl Alt -`
 - Go forward loc: `Ctrl Shift -`
 
-### VIM VSCode
+## VIM VSCode
 - Go beggining of file: `gg`
 - Go end of file: `G`
 - Replace stuff, use \ to scape special characters

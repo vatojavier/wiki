@@ -60,3 +60,7 @@ En la rama **feature/cosa_wapa**
  Puede dar el error `git@github.com: Permission denied (publickey)...`
  
  Seguir los pasos de generate, add y SAML (para organización) [GitHub](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+## Take some changes from other commit
+
+- `git checkout <commit hash> -p file.py` takes changes by hunks from hash commit to file.py, y to apply them.

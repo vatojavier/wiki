@@ -44,3 +44,12 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 - Go back: `ctrl+o`
 - Go forth: `ctrl+i`
 
+### Replace with groups:
+`%s/\(.*\)=\(.*\)/export \1=\2/g`
+
+Embrace groups with `\(\)` and use them with `\1`, `\2` ...
+
+Example replace `POSTGRES_DB=postgres` with `export POSTGRES_DB=postgres`
+
+
+

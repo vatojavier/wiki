@@ -89,6 +89,10 @@ Instalar virtualenv
 
 `pip install virtualenv`
 
+Add to path the virtualenv to path: add to .profile the path venv was installed:
+
+`export PATH=$PATH:/home/javi/.local/bin`
+
 Instalar virtualenvwrapper
 
 `pip install virtualenvwrapper`

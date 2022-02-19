@@ -15,8 +15,14 @@ Para evitar el error de "A value is trying to be set on a copy of a slice from a
 df_b = df_mysql[df_mysql["fecha"] > datetime(2020,6,9,0,0)].copy()
 df_b["deficit"] = df_b["motos_disponibles"] - df_b["iniciadosMySQL"]
 ```
-
 --- 
+
+## Take DF columns/rows by column/row index
+`df.iloc[row,col]`
+```python
+df_smaller = df.iloc[1:,:] # from row 1 to end (skiping row 0),and all columns
+```
+---
 
 ## Devolver fila completa con valor máximo
 ```python

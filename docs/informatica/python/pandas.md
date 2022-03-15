@@ -70,3 +70,33 @@ df.loc[mask, "columna"] = new_value
 ```
 
 ---
+
+## Rows to columns using unstack
+You have this DF
+
+```python
+# Group by the columns
+df = df.groupby(["race", "age"]).size()
+df
+```
+```
+race              age
+African-American  18       2
+                  19      22
+                  20     109
+                  21     191
+                  22     187
+                        ... 
+Other             63       1
+                  64       1
+                  66       1
+                  69       2
+                  70       1
+Length: 263, dtype: int64
+```
+
+Then do a `unstack`
+```python
+df = df.unstack("race").reset_index().fillna(0)
+df.head()
+```

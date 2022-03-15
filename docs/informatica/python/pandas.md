@@ -74,6 +74,8 @@ df.loc[mask, "columna"] = new_value
 ## Rows to columns using unstack
 You have this DF
 
+![Alt text](wiki_stack1.png "example")
+
 ```python
 # Group by the columns
 df = df.groupby(["race", "age"]).size()
@@ -100,3 +102,4 @@ Then do a `unstack`
 df = df.unstack("race").reset_index().fillna(0)
 df.head()
 ```
+![Alt text](wiki_stack2.png "example")

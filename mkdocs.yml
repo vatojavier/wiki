@@ -17,6 +17,7 @@ nav:
       - Flutter: informatica/flutter/flutter.md
       
     - Linux: informatica/linux/linux.md
+    - GIT: informatica/control_versiones/git.md
     - Bash: informatica/bash/bash.md
     - Docker: informatica/docker/docker.md
     - Bases de Datos:

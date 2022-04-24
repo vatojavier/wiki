@@ -1,3 +1,14 @@
+# Matplotlib
+## Subfigures Matplotlib
+
+```python
+fig, axs = plt.subplots(n_rows,n_cols, sharex=True, sharey=True, figsize=(15,15))
+
+for idx, face in enumerate(eigenfaces[:n_rows*n_cols]):
+    axs[idx//n_rows, idx%n_cols].plot(your_data)
+
+```
+
 # Plotly
 
 ## Crear figura con multiples líneas

@@ -1,4 +1,4 @@
-# Git
+# Gita
 
 ## Start a git repo from existing files
 

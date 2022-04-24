@@ -25,8 +25,8 @@ nav:
     - Editores:
       - VSCode:  informatica/editores/vscode.md
       - Jupyter: informatica/editores/jupyter.md
-    - Control de versiones:
-      - Git: informatica/control_versiones/git.md
+#     - Control de versiones:
+#       - Git: informatica/control_versiones/git.md
   
   - Recetas 🌮🥕: 
     - Comidas:

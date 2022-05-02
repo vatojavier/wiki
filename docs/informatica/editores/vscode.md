@@ -37,6 +37,8 @@ Crear archivo `nombre_cualquiera.code-workspace` con
 
 `:%s/foo/bar/g`
 
+- Replace stuff in selection: `:'<,'>s/foo/bar/g`
+
 - Select word under cursor: `viw`
 
 #### Cursor:

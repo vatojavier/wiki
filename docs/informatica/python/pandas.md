@@ -15,6 +15,7 @@ Para evitar el error de "A value is trying to be set on a copy of a slice from a
 df_b = df_mysql[df_mysql["fecha"] > datetime(2020,6,9,0,0)].copy()
 df_b["deficit"] = df_b["motos_disponibles"] - df_b["iniciadosMySQL"]
 ```
+
 --- 
 
 ## Take DF columns/rows by column/row index
@@ -22,12 +23,15 @@ df_b["deficit"] = df_b["motos_disponibles"] - df_b["iniciadosMySQL"]
 ```python
 df_smaller = df.iloc[1:,:] # from row 1 to end (skiping row 0),and all columns
 ```
+
 ---
 
 ## Devolver fila completa con valor máximo
 ```python
 df.loc[df['Value'].idxmax()]
 ```
+---
+
 ## Hacer un count groupby y devolviendolo como DF decente
 
 ```python
@@ -51,6 +55,8 @@ Con esto podrías filtrar las nuevas filas que no hayan terminado cerca (movimie
 df = df[df["mov"] == True]
 ```
 
+---
+
 ### Aplicar función a un índice 
 Como el df.apply pero para aplicarselo al índice (si por ejemplo tienes una fecha como índice).
 
@@ -70,6 +76,7 @@ df.loc[mask, "columna"] = new_value
 ```
 
 ---
+
 ## Column with list to rows
 
 You have the next df:
@@ -86,12 +93,13 @@ df.explode("items")
 
 And you get:
 
-``` 
+```
    user items
 0     1   101
 1     2   102
 1     2   103
 ```
+
 ---
 
 ## Rows to columns using unstack

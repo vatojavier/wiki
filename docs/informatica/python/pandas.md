@@ -60,15 +60,38 @@ df_serie["week_day"] = df_serie.index.map(lambda fecha: fecha.weekday())
 
 ---
 
-## Aplicar "filtro" a determiandos valores de DF
+## Apply filter to some values
 
-Por ejemplo si quieres reemplazar todos los 0 de una columna por un número
+Example case you want to replace 0s for a new value.
 
 ```python
 mask = df["columna"] == 0
 df.loc[mask, "columna"] = new_value
 ```
 
+---
+## Column with list to rows
+
+You have the next df:
+
+```
+   user       items
+0     1         101
+1     2  [102, 103]
+```
+
+```python
+df.explode("items")
+```
+
+And you get:
+
+``` 
+   user items
+0     1   101
+1     2   102
+1     2   103
+```
 ---
 
 ## Rows to columns using unstack

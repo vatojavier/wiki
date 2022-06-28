@@ -1,5 +1,13 @@
 # Pandas
 
+## Get data with NaN values
+```python
+df[df.isna().any(axis=1)]
+```
+
+---
+
+
 ## Pillar un valor filtrando DF con condición múltiple:
 ```python
 valor = df[(df["columna_x"] == x) & (df["columna_x"] == y)]["columna"].iloc[0]
@@ -30,6 +38,7 @@ df_smaller = df.iloc[1:,:] # from row 1 to end (skiping row 0),and all columns
 ```python
 df.loc[df['Value'].idxmax()]
 ```
+
 ---
 
 ## Hacer un count groupby y devolviendolo como DF decente

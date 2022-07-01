@@ -1,4 +1,4 @@
-<!-- # Gita
+# Git
 
 ## Start a git repo from existing files
 
@@ -64,4 +64,3 @@ En la rama **feature/cosa_wapa**
 ## Take some changes from other commit
 
 - `git checkout <commit hash> -p file.py` takes changes by hunks from hash commit to file.py, y to apply them.
- -->

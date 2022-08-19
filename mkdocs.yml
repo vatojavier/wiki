@@ -6,7 +6,7 @@ nav:
     - Programación:
       - Python: 
         - General: informatica/python/general.md
-        - Regresión: informatica/python/regresion.md
+        - Machine Learning: informatica/python/ml.md
         - Pandas: informatica/python/pandas.md
         - Plots: informatica/python/plots.md
         - Conexión a DBs: informatica/python/cDB.md

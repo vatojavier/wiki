@@ -169,6 +169,6 @@ def show_waterfall_plot_for(index, max_features=20):
 
 # a very sunny day
 shap_obj = show_waterfall_plot_for(585);
-shap.force_plot(explainer.expected_value, shap_obj.values, features=X_transformed.iloc[585])
+shap.force_plot(explainer.expected_value, shap_obj.value, features=X_transformed.iloc[585])
 ```
 

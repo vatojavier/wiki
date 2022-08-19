@@ -1,6 +1,7 @@
 # Machine Learning
 
 ## Time Series splits
+Example of 5 splits, each one with a train and test sets (test set size limited)
 ```python
 from sklearn.model_selection import TimeSeriesSplit
 
@@ -120,3 +121,54 @@ scaled_values = xgb_pipeline.named_steps["columntransformer"].fit_transform(X)
 transformed_columns = xgb_pipeline.named_steps["columntransformer"].get_feature_names_out()
 X_transformed = pd.DataFrame(scaled_values, X_new.index, columns=transformed_columns)
 ```
+
+## XGBoost
+```python
+# XGBoost param search
+params = { 'max_depth': [3, 5, 6, 10, 15, 20],
+           'learning_rate': [0.01, 0.1, 0.2, 0.3],
+           'subsample': np.arange(0.5, 1.0, 0.1),
+           'colsample_bytree': np.arange(0.4, 1.0, 0.1),
+           'colsample_bylevel': np.arange(0.4, 1.0, 0.1),
+           'n_estimators': [100, 500, 1000]
+        }
+
+# Try RandomizedSearchCV for shorter computing times
+clf = GridSearchCV(estimator=xgb.XGBRegressor(), 
+                    param_grid=params,
+                    scoring='neg_mean_squared_error', 
+                    verbose=1,
+                    cv=all_splits
+                 )
+ 
+clf.fit(X.values, y)
+print("Best parameters:", clf.best_params_)
+print("Lowest RMSE: ", (-clf.best_score_)**(1/2.0))
+```
+
+## Shap
+Machine Learning explainability
+### Shap with XGBoost
+```python
+xgb_model = xgb_model.fit(X_transformed.values, y) # Don't use a pipeline! first transfor the data matrix
+
+explainer = shap.TreeExplainer(xgb_model)
+shap_values = explainer.shap_values(X_transformed[0:].values) # computing all shap values of the data (only useful if you gonna use them all)
+
+# The API is a bit crappy and the plots are very tiquismiquis
+def show_waterfall_plot_for(index, max_features=20):
+
+    shap_object = ShapObject(base_value=explainer.expected_value, # Baseline value
+                            values=explainer.shap_values(X_transformed.iloc[index:index+1].values)[0],
+                            feature_names=X_transformed.columns,
+                            data=X_transformed.iloc[index] # The feature values for this observation
+                            )
+
+    shap.waterfall_plot(shap_object, max_display=max_features)
+    return shap_object
+
+# a very sunny day
+shap_obj = show_waterfall_plot_for(585);
+shap.force_plot(explainer.expected_value, shap_obj.values, features=X_transformed.iloc[585])
+```
+

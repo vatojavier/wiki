@@ -150,7 +150,7 @@ print("Lowest RMSE: ", (-clf.best_score_)**(1/2.0))
 Machine Learning explainability
 ### Shap with XGBoost
 ```python
-xgb_model = xgb_model.fit(X_transformed.values, y) # Don't use a pipeline! first transfor the data matrix
+xgb_model = xgb_model.fit(X_transformed.values, y) # Don't use a pipeline! first transform the data matrix
 
 explainer = shap.TreeExplainer(xgb_model)
 shap_values = explainer.shap_values(X_transformed[0:].values) # computing all shap values of the data (only useful if you gonna use them all)

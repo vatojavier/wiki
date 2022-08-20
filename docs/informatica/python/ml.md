@@ -114,12 +114,12 @@ xgb_pipeline = make_pipeline(
 ```
 
 ### Applying the pipeline transformers to the data matrix
-So it is easyly accesible to the the transformer data passed to the model.
+So it is easily accesible to the transformed data passed to the model.
 
 ```python
 scaled_values = xgb_pipeline.named_steps["columntransformer"].fit_transform(X)
 transformed_columns = xgb_pipeline.named_steps["columntransformer"].get_feature_names_out()
-X_transformed = pd.DataFrame(scaled_values, X_new.index, columns=transformed_columns)
+X_transformed = pd.DataFrame(scaled_values, X.index, columns=transformed_columns)
 ```
 
 ## XGBoost

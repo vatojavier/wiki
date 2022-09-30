@@ -101,3 +101,7 @@ Use ```px.bar()```
 fig = px.bar(finalizados_dias_df, x="fecha", y="finalizados")
 fig.show()
 ```
+
+# Folium
+
+

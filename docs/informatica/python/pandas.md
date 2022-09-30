@@ -143,3 +143,112 @@ df = df.unstack("race").reset_index().fillna(0)
 df.head()
 ```
 ![Alt text](wiki_stack2.png "example")
+
+
+# GeoPandas
+## Create a uniform square grid within a bounding box
+
+```python
+import geopandas as gpd 
+from math import cos, pi
+import numpy as np
+
+def delta_coords(coords: list, m_north , m_east):
+    """
+    Calculates the new coordinates values based on the displacement North and East in meters.
+
+    Params:
+        coords (list): list containing initial point [lat, long]
+        m_north, m_east: displacement in each direction in meters
+
+    Returns:
+        latO, longO: The new values after the displacement. 
+    """
+
+    #Position, decimal degrees
+    lat = coords[0]
+    long = coords[1]
+
+    #Earth’s radius, sphere
+    R=6378137
+
+    # //offsets in meters
+    dn = m_north
+    de = m_east
+
+    # //Coordinate offsets in radians
+    dLat = dn/R
+    dLon = de/(R*cos(pi*lat/180))
+
+    # //OffsetPosition, decimal degrees
+    latO = lat + dLat * 180/pi
+    lonO = long + dLon * 180/pi 
+    return latO, lonO
+
+def get_grid(bbox: list, meters) -> gpd.GeoDataFrame:
+    """
+    bounding_box: [min_lat, min_long, max_lat, max_long]
+    Returns a GeoDf with a square grid of meters  within the bbox.
+    """
+    min_lat = bbox[0]
+    max_lat = bbox[2]
+
+    min_long = bbox[1]
+    max_long = bbox[3]
+
+    # Getting the delta coords for every x meters displaced using a point of the bbox
+    # To the east (longitude)
+    step_east = delta_coords(
+        [min_lat, min_long],
+        0,
+        meters
+    )
+    step_east = step_east[1] - min_long
+
+    # To the north
+    step_north = delta_coords(
+        [min_lat, min_long],
+        meters,
+        0
+    )
+    step_north = step_north[0] - min_lat
+
+    new_longs = np.arange(min_long, max_long+step_east, step_east) 
+    new_lats = np.arange(min_lat, max_lat+step_north, step_north)
+
+    polygons = []
+    for lat in new_lats:
+        for long in new_longs:
+            polygons.append(Polygon(
+                    [
+                        [long, lat],
+                        [long+step_east,lat],
+                        [long+step_east, lat+step_north],
+                        [long, lat+step_north],
+                    ]
+                )
+            )
+
+    grid = gpd.GeoDataFrame({"geometry": polygons}, crs="EPSG:4326")
+    grid["id"] = [i for i in range(len(grid))]
+    
+    return grid
+    
+grid = get_grid([55.554479,12.344015, 55.809976, 12.714631], 100)
+
+```
+
+## Spatial join counting points inside polygons
+
+```python
+# sjoin returns a row for each point inside the polygon - [polygon_x, point_p]
+sjoin = gpd.sjoin(grid, points)
+
+# Grouping by polygon to count amount of points inside them
+sjoin = sjoin.groupby("id_left").size().reset_index(name="count").\
+   sort_values(by="count", ascending=False).rename(columns={"id_left": "grid_id"})
+
+# getting those polygons with at least a point in them
+grid_with_points = grid.merge(sjoin, left_on="id", right_on="grid_id")
+```
+

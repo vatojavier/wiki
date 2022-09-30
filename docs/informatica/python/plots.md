@@ -128,3 +128,15 @@ feature = folium.features.GeoJson(grid_with_rentals,
 m.add_child(feature)
 ```
 
+## Add elements to different layer so they can be deselected
+Just create a `FeatureGroup` and add stuff to it
+
+```python
+means_group = folium.FeatureGroup(name="Centroids").add_to(m)
+
+# Adding markers to the FeatureGroup
+[means_group.add_child(folium.Marker(mean, popup="Cluster center")) for mean in means]
+
+folium.LayerControl().add_to(m)
+
+```

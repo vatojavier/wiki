@@ -238,6 +238,13 @@ grid = get_grid([55.554479,12.344015, 55.809976, 12.714631], 100)
 
 ```
 
+## Create GeoDF prepared to do operations
+
+```python
+hubs_df["point"] = hubs_df.apply(lambda row: Point(row.longitude, row.latitude), axis=1)
+hubs_gdf = gpd.GeoDataFrame(hubs_df, geometry="point", crs="EPSG:4326")
+```
+
 ## Spatial join counting points inside polygons
 
 ```python

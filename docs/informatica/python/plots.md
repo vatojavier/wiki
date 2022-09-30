@@ -103,5 +103,28 @@ fig.show()
 ```
 
 # Folium
+## Create a Choropleth or Grid map with tooltip
 
+```
+m = folium.Map(location=[55.6829, 12.5775], zoom_start=11, tiles="cartodbpositron")
+
+folium.Choropleth(
+    geo_data=grid_with_rentals, # GeoDataFrame
+    fill_color="RdPu",
+    data=grid_with_rentals,
+    columns=["id", "count_log"], # id of the grid, count
+    key_on='feature.properties.id', # id of the grid
+    line_opacity=1,
+    line_weight=0.1
+).add_to(m)
+
+# Tooltips
+style = {'fillColor': '#00000000', 'color': '#00000000'}
+
+feature = folium.features.GeoJson(grid_with_rentals,
+  name='count', # Column to show the data of each grid
+  style_function=lambda x: style,
+  tooltip=folium.GeoJsonTooltip(fields=["count"],aliases=["count"],labels=True))
+m.add_child(feature)
+```python
 

@@ -20,8 +20,11 @@ Especias
 - Cúrcuma (no importante)
 - Chili flakes o cayenne pepper algo picante
 - Pimienta
-
 ```
+
+
+## Pasos
+
 1. Hacer Arroz y mientras
 1. Cortar pollo en trozos y echar en plato(no muy pequeños, 1 pollo grande en 4+-)
 2. Echar Sal y Garam masala (2 tsp)

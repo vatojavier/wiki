@@ -122,6 +122,49 @@ transformed_columns = xgb_pipeline.named_steps["columntransformer"].get_feature_
 X_transformed = pd.DataFrame(scaled_values, X.index, columns=transformed_columns)
 ```
 
+### Parameter search using a foking Pipeline
+Just use the named step following by `__param`
+
+Check the named step using `pipeline.named_steps` and select the key of the estimator/s (the last ones).
+
+```python
+
+regr = RandomForestRegressor()
+
+pipeline = make_pipeline(
+    ColumnTransformer(
+        transformers=[
+            ("categorical", one_hot_encoder, categorical_columns),
+            ("month_sin", sin_transformer(12), ["month"]),
+            ("month_cos", cos_transformer(12), ["month"]),
+        ],
+        remainder="passthrough",
+    ),
+    regr
+)
+
+
+n_estimators = [int(x) for x in np.linspace(start=200, stop=1000, num=10)]
+max_depth = [int(x) for x in np.linspace(10, 110, num=11)]
+max_depth.append(None)
+min_samples_split = [2, 5, 10]
+min_samples_leaf = [1, 2, 4]
+bootstrap = [True, False]
+
+random_grid = {
+    "randomforestregressor__n_estimators": n_estimators,
+    "randomforestregressor__max_depth": max_depth,
+    "randomforestregressor__min_samples_split": min_samples_split,
+    "randomforestregressor__min_samples_leaf": min_samples_leaf,
+    "randomforestregressor__bootstrap": bootstrap,
+}
+
+search = RandomizedSearchCV(pipeline, random_grid, random_state=0, cv=all_splits)
+search.fit(X, y)
+search.best_params_
+
+```
+
 ## XGBoost
 ```python
 # XGBoost param search

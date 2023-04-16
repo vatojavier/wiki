@@ -83,6 +83,18 @@ date_interest_time_to_previous = (
 
 ```
 # Entornos virtuales
+
+`python3 -m venv path/to/newenv`
+
+Might need to give execute permission: `chmod +x myenv/bin/activate`
+
+`source myenv/bin/activate`
+
+
+
+
+
+## Using VirtualenvWrapper
 Todo esto en el entorno base!
 
 Instalar virtualenv

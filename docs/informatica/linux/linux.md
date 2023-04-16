@@ -9,6 +9,14 @@ Editar `/home/usuario/.profile` y añadir al final
 
 Reiniciar la terminal o ejecutar `source .profile`
 
+### Crontabs
+
+`crontab -l` see.
+
+`crontab -e` edit.
+
+`sudo crontab -u <username> -l` other user's crontab.
+
 # Ubuntu
 ### Create executable for the Ubuntu UI.
 Te lo encontrará el sistema y poder ejecutarlo con su icono y tal.

@@ -145,8 +145,8 @@ df.head()
 ![Alt text](wiki_stack2.png "example")
 
 
-# GeoPandas
-## Create a uniform square grid within a bounding box
+## GeoPandas
+### Create a uniform square grid within a bounding box
 
 ```python
 import geopandas as gpd 
@@ -238,11 +238,11 @@ grid = get_grid([55.554479,12.344015, 55.809976, 12.714631], 100)
 
 ```
 
-## Create GeoDF prepared to do operations
+### Create GeoDF prepared to do operations
 
 ```python
-hubs_df["point"] = hubs_df.apply(lambda row: Point(row.longitude, row.latitude), axis=1)
-hubs_gdf = gpd.GeoDataFrame(hubs_df, geometry="point", crs="EPSG:4326")
+geo_series = gpd.points_from_xy(rentals_df['longitude_start'], rentals_df['latitude_start'])
+rentals_df = gpd.GeoDataFrame(rentals_df, geometry=geo_series, crs='EPSG:4326')
 ```
 
 ## Spatial join counting points inside polygons
